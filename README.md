@@ -28,7 +28,6 @@ JWTAuditor is a comprehensive, **100% client-side** JWT (JSON Web Token) securit
 - 🎯 **Advanced Attack Platform** - 7 specialized attack modules for comprehensive testing
 - 📚 **Comprehensive Documentation** - Learn JWT security with our detailed guides
 - 🔒 **100% Client-Side** - Your tokens never leave your browser
-- 📱 **Mobile Responsive** - Optimized for all devices and screen sizes
 
 ## 🎯 Why JWTAuditor?
 
@@ -93,7 +92,24 @@ JWTAuditor addresses all these pain points with:
 ### Option 1: Use Online (Recommended)
 Visit [jwtauditor.com](https://jwtauditor.com) and start testing immediately!
 
-### Option 2: Run Locally
+### Option 2: Run with Docker (Recommended for Local)
+```bash
+# Clone the repository
+git clone https://github.com/dr34mhacks/jwtauditor.git
+cd jwtauditor
+
+# Build and run with Docker Compose (easiest)
+docker-compose up -d
+
+# Or build and run manually
+docker build -t jwtauditor .
+docker run -d -p 8080:80 --name jwtauditor-app jwtauditor
+
+# Open in browser
+open http://localhost:8080
+```
+
+### Option 3: Run Locally (Development)
 ```bash
 # Clone the repository
 git clone https://github.com/dr34mhacks/jwtauditor.git
@@ -108,6 +124,14 @@ npx serve .
 # Open in browser
 open http://localhost:8000
 ```
+
+### 🐳 Docker Features
+- **Production-ready** Nginx server with optimized configuration
+- **Security headers** and CSP policies configured
+- **Gzip compression** for better performance
+- **Health checks** for monitoring
+- **Static asset caching** for faster loading
+- **Clean container** with unnecessary files removed
 
 ## 🤝 Contributing
 
